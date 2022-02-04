@@ -1,0 +1,82 @@
+# REGISTER
+###
+POST http://localhost:5000/api/auth/register 
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "email":"admin@gmail.com",
+    "password":"123456",
+    "confirmpassword":"123456"
+}
+
+# LOGIN
+###
+POST http://localhost:5000/api/auth/login 
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"123456"
+}
+
+# UPDATE USER INFO
+###
+PUT http://localhost:5000/api/user/61d2486ff84066bdff469301
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+{
+    "username":"danhnguyen"
+}
+
+# GET A USER 
+###
+GET http://localhost:5000/api/user/
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+# FIND USER 
+###
+GET http://localhost:5000/api/user/find/61d2486ff84066bdff469301
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+# GET ALL USER 
+###
+GET http://localhost:5000/api/user?new=true
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+# GET USER STATS
+###
+GET http://localhost:5000/api/user/stats
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+# CREATE NEW PRODUCT
+###
+POST http://localhost:5000/api/product/
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+{
+    "title": "lv shirt",
+    "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id enim fugiat, ipsam iste quos aspernatur expedita, quaerat modi sapiente fuga nesciunt libero accusamus? Eveniet, culpa soluta quas ea at amet!",
+    "img": "https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-mixed-leather-blouson--HLL20WD17908_PM2_Front%20view.png?wid=656&hei=656",
+    "categories": ["shirt", "women"],
+    "size": ["xs", "s", "m", "l", "xl"],
+    "color": ["black", "white", "yellow"],
+    "price": 500
+}
+
+# GET ALL PRODUCT
+###
+GET http://localhost:5000/api/product
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDExODAzNjMsImV4cCI6MTY0MTQzOTU2M30.tb3kJl3SSwVHYmYqUkOT8fFh2lm10S0iHJgrJoOAdts
+
+###
+GET http://localhost:5000/api/order/income
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDI2YzIzMDkzN2EwYjUwZGNiMDEyMiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDE5MDU1MTEsImV4cCI6MTY0MjE2NDcxMX0.kMgNSbrZHguOy06JUkFl2POs9NampsM0Nffw2Xn_s6c
