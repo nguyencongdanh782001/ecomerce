@@ -338,12 +338,12 @@ const ProductDetail = () => {
                                 <Snackbar
                                     open={messageError.openMessage}
                                     onClose={handleClose}
-                                    autoHideDuration={4000}
+                                    autoHideDuration={1800}
                                     TransitionComponent={transition}
                                     anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
                                     key={transition ? transition.name : ''}
                                 >
-                                    <Alert onClose={handleClose} severity={messageError.isValid ? 'error' : 'success'} sx={{ width: '100%' }}>
+                                    <Alert severity={messageError.isValid ? 'error' : 'success'} sx={{ width: '100%' }}>
                                         {messageError.message}
                                     </Alert>
                                 </Snackbar>
